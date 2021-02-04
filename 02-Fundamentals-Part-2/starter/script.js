@@ -160,13 +160,13 @@ function getSummary() {
     }
 }
 
-const jonasArray = [
+/* const jonasArray = [
     'Jonas',
     'Schmedtmann',
     2037 - 1991,
     'teacher',
     ['Michael', 'Peter', 'Steven']
-];
+]; */
 
 const jonas = {
     firstName: 'Jonas',
@@ -197,17 +197,17 @@ console.log(jonas["lastName"]); //square brackets allow any expressions to calcu
 
 const nameKey = "Name";
 console.log(jonas['first' + nameKey]);
-const interestedIn = prompt("What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends");
-console.log(jonas[interestedIn]); //undefined is what happens when we access an ojbect on a property that doesn't exist. 
+// const interestedIn = prompt("What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends");
+// console.log(jonas[interestedIn]); //undefined is what happens when we access an ojbect on a property that doesn't exist. 
 
-if (jonas[interestedIn]) {
+/* if (jonas[interestedIn]) {
     console.log(jonas[interestedIn]);
 } else {
     console.log("Wrong request! Choose between firstName, lastName, age, job, and friends");
-}
+} */
 
 jonas.location = "Portugal"; // add object property
-jonas['twitter'] = '@jonasschmedtman';
+jonas['twitter'] = '@jonasschmedtman'; // add object property with brackets
 console.log(jonas);
 
 // Challenge 
@@ -222,7 +222,78 @@ console.log(jonas.calcAge());
 // "Jonas is a 46-year old teacher, and he has a/no driver's license"
 console.log(jonas.getSummary());
 
+console.log('Lifting weights repetition 1');
 
+// for loops keeps running while condition is TRUE
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repertition ${rep}`);
+}
+
+const jonasArray = [
+    'Jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven']
+];
+// console.log(jonas[0]);
+// ...
+// console.log(jonas[4]);
+const types = [];
+for (let i = 0; i < jonasArray.length; i++) {
+    console.log(jonasArray[i]);
+    // Filling types array
+
+    //types[i] = typeof jonasArray[i] One way of creating an array within a for loop
+    // types.push(typeof jonasArray[i]); // other way of creating an array in a for loop
+}
+console.log(types);
+
+const years2 = [1991, 2007, 1969, 2020];
+const ages2 = [];
+
+for (let i = 0; i < years2.length; i++) {
+    ages2.push(2037 - years2[i]);
+}
+
+console.log(ages2);
+
+// continue and break 
+console.log('--- ONLY STRINGS ---')
+for (let i = 0; i < jonasArray.length; i++) {
+    if (typeof jonasArray[i] !== 'string') continue;
+
+    console.log(jonasArray[i], typeof jonasArray[i]);
+}
+
+console.log('--- BREAK WITH NUMBER ---')
+for (let i = 0; i < jonasArray.length; i++) {
+    if (typeof jonasArray[i] !== 'number') continue;
+
+    console.log(jonasArray[i], typeof jonasArray[i]);
+}
+/* commented for clarity
+const jonasArray = [
+    'Jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven']
+]; */
+// looping backwards 
+// 0, 1, ..., 4
+// 4, 3, ..., 0
+for (let i = jonasArray.length - 1; i >= 0; i--) {
+    console.log(i, jonasArray[i]);
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`-------- Starting exercise ${exercise}`);
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`${exercise}: Lifting weight repetition ${rep}`);
+    }
+
+}
 
 
 

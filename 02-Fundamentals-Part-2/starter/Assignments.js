@@ -6,7 +6,7 @@ describeCountry("USA", 3000000, "Washington D.C.");
 
 // function declaration 
 function percent1(population) {
-    return 79000000000.00 / (population * 100);
+    return 7674000000 / (population * 100);
 }
 const usapop = 3000000.00;
 const usa = percent1(usapop);
@@ -19,10 +19,10 @@ const percentageOfWorld2 = function (population) {
     return 79000000000.00 / population * 100;
 }
 const indiapop = 899999999;
-const india = percentageOfWorld2(indiapop);
+const india = percent1(indiapop);
 console.log(india);
 const japanpop = 234444444;
-const japan = percentageOfWorld2(japanpop);
+const japan = percent1(japanpop);
 console.log(japan);
 
 // arrow function 
@@ -47,12 +47,29 @@ else {
 const percentages = new Array(percent1(populations[0]), percent1(populations[1]), percent1(populations[2]), percent1(populations[3]));
 console.log(percentages[0]);
 
+
+function describe() {
+    return console.log(`${this.country} has ${this.population} ${this.language}-speaking people, ${this.neighbours.length} neighbours and a capital called ${this.capital}`);
+}
+
+function checkIsland() {
+    this.isIsland = (`${this.neighbours} >= 1`) ? true : false;
+    return this.isIsland;
+}
 const myCountry = {
     country: "USA",
     capital: "Washington",
     language: "English",
     population: 3000000,
-    neighbours: ["Canada", "Mexico"]
+    neighbours: ["Canada", "Mexico"],
+    describe: function () {
+        return `${this.country} has ${this.population} ${this.language}-speaking people, ${this.neighbours.length} neighbours and a capital called ${this.capital}`;
+
+    },
+    checkIsland: function () {
+        this.isIsland = (`${this.neighbours} >= 1`) ? true : false;
+        return this.isIsland;
+    }
 };
 console.log(myCountry);
 
@@ -62,3 +79,14 @@ myCountry.population = 5000000;
 console.log(myCountry.population);
 myCountry["population"] = 3000000;
 console.log(myCountry.population);
+console.log(myCountry.describe());
+console.log(myCountry.checkIsland());
+for (let rep = 1; rep <= 50; rep++) {
+    console.log(`Voter number ${rep} is currently voting`);
+}
+
+const percentages2 = [];
+for (i = 0; i < populations.length; i++) {
+    percentages2.push(percent1(populations[i]));
+}
+console.log(percentages2);
