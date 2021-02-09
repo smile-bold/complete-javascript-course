@@ -47,6 +47,21 @@ else {
 const percentages = new Array(percent1(populations[0]), percent1(populations[1]), percent1(populations[2]), percent1(populations[3]));
 console.log(percentages[0]);
 
+// Basic Array Operations 
+const neighbours = [
+    "Mexico",
+    "Canada"
+]
+neighbours.push("Utopia");
+console.log(neighbours[2]);
+neighbours.pop();
+console.log(neighbours);
+if (neighbours.includes("Germany") !== true) {
+    console.log("Probably not a central European country :D");
+}
+neighbours[0] = "South America";
+console.log(neighbours);
+
 
 function describe() {
     return console.log(`${this.country} has ${this.population} ${this.language}-speaking people, ${this.neighbours.length} neighbours and a capital called ${this.capital}`);
@@ -61,9 +76,9 @@ const myCountry = {
     capital: "Washington",
     language: "English",
     population: 3000000,
-    neighbours: ["Canada", "Mexico"],
+    neighbours2: ["Canada", "Mexico"],
     describe: function () {
-        return `${this.country} has ${this.population} ${this.language}-speaking people, ${this.neighbours.length} neighbours and a capital called ${this.capital}`;
+        return `${this.country} has ${this.population} ${this.language}-speaking people, ${this.neighbours2.length} neighbours and a capital called ${this.capital}`;
 
     },
     checkIsland: function () {
@@ -73,7 +88,7 @@ const myCountry = {
 };
 console.log(myCountry);
 
-console.log(`${myCountry.country} has ${myCountry.population} ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbours and a capital called ${myCountry.capital}`);
+console.log(`${myCountry.country} has ${myCountry.population} ${myCountry.language}-speaking people, ${myCountry.neighbours2.length} neighbours and a capital called ${myCountry.capital}`);
 
 myCountry.population = 5000000;
 console.log(myCountry.population);
