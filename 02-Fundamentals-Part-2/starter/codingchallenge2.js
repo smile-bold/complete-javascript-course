@@ -1,4 +1,4 @@
-
+// coding challenge 2 and 4
 const value1 = 275;
 const value2 = 40;
 const value3 = 430;
@@ -17,4 +17,29 @@ const tips = new Array(calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2]));
 console.log(tips);
 const total = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]];
 console.log(total);
+
+const bills2 = new Array(22, 295, 176, 440, 37, 105, 10, 1100, 86, 52);
+const tips2 = [];
+const totals2 = []; 
+
+for (let i = 0; i < bills2.length; i++) {
+    const tip = calcTip(bills[i]);
+    tips.push(tip);
+    totals2.push(tip + bills[i]);
+    
+}
+
+
+
+console.log(totals2);
+const calcAverage = (arr) => {
+    let sum = 0;
+    for (i = 0; i < arr.length; i++) {
+       sum += arr[i];
+    } 
+    return sum /arr.length; 
+}
+console.log(calcAverage(totals2));
+
+
 

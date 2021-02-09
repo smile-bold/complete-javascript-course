@@ -283,7 +283,7 @@ const jonasArray = [
 // looping backwards 
 // 0, 1, ..., 4
 // 4, 3, ..., 0
-for (let i = jonasArray.length - 1; i >= 0; i--) {
+/* for (let i = jonasArray.length - 1; i >= 0; i--) {
     console.log(i, jonasArray[i]);
 }
 
@@ -293,7 +293,25 @@ for (let exercise = 1; exercise < 4; exercise++) {
         console.log(`${exercise}: Lifting weight repetition ${rep}`);
     }
 
+} */
+
+// while loop 
+let rep = 1; 
+
+while( rep <= 18) {
+    console.log(` Lifting weight repetition ${rep}`);
+    rep++;
 }
+let dice = Math.trunc(Math.random() * 6) * 1;
+console.log(dice);
+/* while (dice !== 6) {
+    console.log(`You rolled a ${dice}`); 
+    dice = Math.trunc(Math.random() * 6) * 1;
+    if (dice === 6) console.log(`Loop is about to end...`);  // runs indefinitely without a counter. 
+}
+
+
+ 
 
 
 
