@@ -96,7 +96,7 @@ myCountry["population"] = 3000000;
 console.log(myCountry.population);
 console.log(myCountry.describe());
 console.log(myCountry.checkIsland());
-for (let rep = 1; rep <= 50; rep++) {
+/* for (let rep = 1; rep <= 50; rep++) {
     console.log(`Voter number ${rep} is currently voting`);
 }
 
@@ -104,18 +104,13 @@ const percentages2 = [];
 for (i = 0; i < populations.length; i++) {
     percentages2.push(percent1(populations[i]));
 }
-console.log(percentages2);
+console.log(percentages2); */
 
-// Looping Backwards and Loops in Loops 
-const listOfNeighbours = [
-    ['Canada', 'Mexico'],
-    ['Spain'],
-    ['Norway', 'Sweden', 'Russia']
-];
-// let index2 = myCountry.neighbours2[index];
-for (let m = 0; m < listOfNeighbours.length; m++) {
-    for (let j = 0; j < listOfNeighbours[m].length; j++) {
-        console.log(`Neighbour: ${listOfNeighbours[m][j]}`);
-    }
+// while loop 
+const percentages3 = []; 
+let i = 0;
+while (i < populations.length) {
+    const perc = percentages3.push(percent1(populations[i]));
+    i++;
 }
-
+console.log(percentages3);
