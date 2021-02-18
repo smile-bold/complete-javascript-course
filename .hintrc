@@ -1,0 +1,12 @@
+{
+    "extends": [
+        "accessibility"
+    ],
+    "http-cache": ["error", {
+        "maxAgeTarget": 300, // One year in seconds
+        "maxAgeResource": 3153600 // Six months in seconds
+    }]
+}
+// Trying to configure web "hints", not sure what it is but when I try to run the console
+// in the index.html for the "Developer-Skills"; there are several compatibility, accessibility, and performance issues. 
+//  issue relates to microsoft edge specifically; am able to continue progress with course videos by changing live server browser to chrome. 
